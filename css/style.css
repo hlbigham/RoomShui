@@ -1,0 +1,43 @@
+/* Body, etc. */
+
+
+
+
+/* Navigation */
+
+.navbar-nav {
+    margin-left: auto;
+    margin-right: 0 !important;
+}
+
+.navbar{
+    padding: 20px 40px;
+}
+
+/* Footer */
+
+.footer-pad{
+    padding: 0px 40px;
+}
+
+/* Design Page */
+
+.list-header{
+    border-bottom: solid gray 1pt;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+.design-tool{
+    border: solid grey 1pt;
+    border-radius: 15px;
+    height: 650px;;
+}
+
+.tool-pl{
+    padding-left:40px;
+}
+
+.tool-pr{
+    padding-right:40px;
+}
