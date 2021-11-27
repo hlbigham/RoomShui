@@ -9,31 +9,61 @@
     <title>Room Shui</title>
   </head>
   <body class="d-flex flex-column h-100">
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Room Shui</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active mr-3">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item mr-3">
-            <a class="nav-link" href="design.html">Design</a>
-          </li>
-          <li class="nav-item mr-3">
-            <a class="nav-link" href="styles.html">Styles</a>
-          </li>
-          <li class="nav-item">
-            <button type="button" class="btn btn-outline-primary">Log In</button>
-          </li>
-        </ul>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Room Shui</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active mr-3">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item mr-3">
+              <a class="nav-link" href="design.html">Design</a>
+            </li>
+            <li class="nav-item mr-3">
+              <a class="nav-link" href="styles.html">Styles</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#logInModal">Log In</button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Log In and Design!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer d-block text-center">
+              <button type="button" class="btn btn-primary">Log In</button>
+              <p class="small">Trouble logging in? <a href="#">Get help.</a></p>
+            </div>
+          </div>
+        </div>
       </div>
-    </nav>
-  </header>
+    </header>
   
   <section class="container-fluid my-auto">
     <div class="align-middle">
@@ -43,7 +73,7 @@
       <div class="text-center"> 
         <button type="button" class="btn-lg btn-primary">Get Started</button>
       </div>
-      <p class="text-center small">Returning designer? <a href="#">Log In.</a></p>
+      <p class="text-center small">Returning designer? <a href="#" data-toggle="modal" data-target="#logInModal">Log In.</a></p>
     </div>    
   </section>
 

@@ -27,47 +27,100 @@
             <a class="nav-link" href="styles.html">Styles</a>
           </li>
           <li class="nav-item">
-            <button type="button" class="btn btn-outline-primary">Log In</button>
+            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#logInModal">Log In</button>
           </li>
         </ul>
       </div>
     </nav>
+
+    <div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Log In and Design!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer d-block text-center">
+            <button type="button" class="btn btn-primary">Log In</button>
+            <p class="small">Trouble logging in? <a href="#">Get help.</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
   
   <section>
-    <h2 class="text-center mt-4">We all have stories to tell.</h2>
-    <h2 class="text-center mb-5">Start working on yours today.</h2>
+    <h2 class="text-center mt-4">Explore Different Styles</h2>
     <div class="card-deck mx-auto mb-5">
-      <div class="card">
-        <div class="card-body">
-          <h3 class="text-center">1</h3>
-          <h5 class="card-title text-center">Start Writing</h5>
+      <div class="card style-card">
+        <div class="card-body">         
+          <img src="images/keepwriting.png" class="card-img-top" alt="...">
+          <h5 class="card-title text-center">Feng Shui</h5>
           <p class="card-text">"Just like, I should fancy, and very depressing. I began to wonder what on earth I should do when I caught sight of the play-bill. What do you think the play was, Harry?"</p>
-          <p class="card-text">"I should think 'The Idiot Boy', or 'Dumb but Innocent'. Our fathers used to like that sort of piece, I believe. The longer I live, Dorian, the more keenly I feel that whatever was good enough for our fathers is not good enough for us. In art, as in politics, les grandperes ont toujours tort."</p>
+          <p>Additonal Resources: <a href="#" target="_blank">Wikipedia</a></p>
         </div>
-        <img src="images/startwriting.jpg" class="card-img-top" alt="...">
       </div>
-      <div class="card">
-        <div class="card-body">
-          <h3 class="text-center">2</h3>
-          <h5 class="card-title text-center">Develop Your Skills</h5>
-          <p class="card-text">"I should think 'The Idiot Boy', or 'Dumb but Innocent'. Our fathers used to like that sort of piece, I believe. The longer I live, Dorian, the more keenly I feel that whatever was good enough for our fathers is not good enough for us. In art, as in politics, les grandperes ont toujours tort."</p>
-        </div>
-        <img src="images/developskills.png" class="card-img-top" alt="...">
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h3 class="text-center">3</h3>
-          <h5 class="card-title text-center">Keep Writing</h5>
+      <div class="card style-card">
+        <div class="card-body">         
+          <img src="images/keepwriting.png" class="card-img-top" alt="...">
+          <h5 class="card-title text-center">Feng Shui</h5>
           <p class="card-text">"Just like, I should fancy, and very depressing. I began to wonder what on earth I should do when I caught sight of the play-bill. What do you think the play was, Harry?"</p>
-          <p class="card-text">"I should think 'The Idiot Boy', or 'Dumb but Innocent'. Our fathers used to like that sort of piece, I believe. The longer I live, Dorian, the more keenly I feel that whatever was good enough for our fathers is not good enough for us. In art, as in politics, les grandperes ont toujours tort."</p>
+          <p>Additonal Resources: <a href="#" target="_blank">Wikipedia</a></p>
         </div>
-        <img src="images/keepwriting.png" class="card-img-top" alt="...">
+      </div>
+      <div class="card style-card">
+        <div class="card-body">         
+          <img src="images/keepwriting.png" class="card-img-top" alt="...">
+          <h5 class="card-title text-center">Feng Shui</h5>
+          <p class="card-text">"Just like, I should fancy, and very depressing. I began to wonder what on earth I should do when I caught sight of the play-bill. What do you think the play was, Harry?"</p>
+          <p>Additonal Resources: <a href="#" target="_blank">Wikipedia</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-deck mx-auto mb-5">
+      <div class="card style-card">
+        <div class="card-body">         
+          <img src="images/keepwriting.png" class="card-img-top" alt="...">
+          <h5 class="card-title text-center">Feng Shui</h5>
+          <p class="card-text">"Just like, I should fancy, and very depressing. I began to wonder what on earth I should do when I caught sight of the play-bill. What do you think the play was, Harry?"</p>
+          <p>Additonal Resources: <a href="#" target="_blank">Wikipedia</a></p>
+        </div>
+      </div>
+      <div class="card style-card">
+        <div class="card-body">         
+          <img src="images/keepwriting.png" class="card-img-top" alt="...">
+          <h5 class="card-title text-center">Feng Shui</h5>
+          <p class="card-text">"Just like, I should fancy, and very depressing. I began to wonder what on earth I should do when I caught sight of the play-bill. What do you think the play was, Harry?"</p>
+          <p>Additonal Resources: <a href="#" target="_blank">Wikipedia</a></p>
+        </div>
+      </div>
+      <div class="card style-card">
+        <div class="card-body">         
+          <img src="images/keepwriting.png" class="card-img-top" alt="...">
+          <h5 class="card-title text-center">Feng Shui</h5>
+          <p class="card-text">"Just like, I should fancy, and very depressing. I began to wonder what on earth I should do when I caught sight of the play-bill. What do you think the play was, Harry?"</p>
+          <p>Additonal Resources: <a href="#" target="_blank">Wikipedia</a></p>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="footer py-3">
+  <footer class="footer mt-auto py-3">
     <div class="container-fluid footer-pad">
       <div class="row">
         <div class="col-sm">

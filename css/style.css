@@ -41,3 +41,31 @@
 .tool-pr{
     padding-right:40px;
 }
+
+.modal-img{
+    width: 100px;
+}
+
+.content-stretch-design{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.card-footer{
+    background-color: white;
+    border-top:none;
+}
+
+.change-view-icon{
+    height: 38px;
+}
+
+
+/* Style Page */
+
+.style-card{
+    height: 435px;
+    width:426.67px;
+}
