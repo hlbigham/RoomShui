@@ -20,6 +20,11 @@
     padding: 0px 40px;
 }
 
+.smIcon{
+    height: 30px;
+    width: 30px;
+}
+
 /* Design Page */
 
 .list-header{
@@ -31,7 +36,20 @@
 .design-tool{
     border: solid grey 1pt;
     border-radius: 15px;
-    height: 650px;;
+    height: 650px;
+}
+
+.top-down{
+    background-image: url("../images/topdown.png");
+    background-repeat: no-repeat;
+    background-size: 550px 100%;
+    background-position: center;
+}
+
+.isometric{
+    background-image: url("../images/isometric.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .tool-pl{
@@ -58,10 +76,27 @@
     border-top:none;
 }
 
-.change-view-icon{
+#change-view-icon{
     height: 38px;
 }
 
+.button-left{
+    justify-content: flex-start;
+}
+
+.no-rooms-saved{
+    border: none;
+}
+
+.selected-room{
+    background-color: #a5a7aa;
+    border-color: #a5a7aa;
+}
+
+.logged-in{
+    padding: 0.375rem;
+    border-radius: 1.5rem;
+}
 
 /* Style Page */
 

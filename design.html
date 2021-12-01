@@ -27,8 +27,11 @@
             <li class="nav-item mr-3">
               <a class="nav-link" href="styles.html">Styles</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="login">
               <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#logInModal">Log In</button>
+            </li>            
+            <li class="nav-item d-none" id="edward">
+              <button type="button" class="btn btn-primary logged-in" data-toggle="modal" data-target="#logInModal">EW</button>
             </li>
           </ul>
         </div>
@@ -48,7 +51,6 @@
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Password</label>
@@ -66,6 +68,8 @@
     </header>
   
   <section class="pt-4">
+
+    <!-- New Room Modal -->
     <div class="modal fade" id="newRoomModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
@@ -84,7 +88,7 @@
                   <p class="card-text">Use a standard room template or create your own.</p>
                 </div>
                 <div class="card-footer text-center">
-                  <button type="button" class="btn btn-primary">Create Room</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#templatesModal">Create Room</button>
                 </div>
               </div>
               <div class="card">
@@ -115,18 +119,127 @@
       </div>
     </div>
 
+    <div class="modal fade" id="templatesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Choose a Template</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card-deck">
+              <div class="card text-center">
+                <div class="card-body">         
+                  <img src="images/bedroom.png" class="card-img-top modal-img" alt="...">
+                  <h5 class="card-title text-center mt-2">Bedroom</h5>
+                </div>
+                <div class="card-footer text-center">
+                  <button type="button" class="btn btn-primary" id="bedroom" data-dismiss="modal">Select</button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body text-center">         
+                  <img src="images/office.png" class="card-img-top modal-img" alt="...">
+                  <h5 class="card-title text-center mt-2">Office</h5>
+                </div>
+                <div class="card-footer text-center">
+                  <button type="button" class="btn btn-primary">Select</button>
+                </div>
+              </div>
+              <div class="card">                
+                <div class="card-body text-center">  
+                  <div class="content-stretch-design">
+                    <img src="images/livingroom.png" class="card-img-top modal-img" alt="...">
+                  </div>
+                  <h5 class="card-title text-center mt-2">Living Room</h5>
+                </div>
+                <div class="card-footer text-center">                  
+                  <button type="button" class="btn btn-primary">Select</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer button-left">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#newRoomModal"><img src="images/back.png" style="width:15px;"> Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Save Room Modal -->
+
+    <div class="modal fade" id="saveRoomModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Save This Room</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Looks like you're not logged in. Create an account or log in to save rooms.</p>
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Confirm Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+              </div>
+              <button type="button" class="btn btn-primary mr-3" data-dismiss="modal" data-toggle="modal" data-target="#nameRoom">Create Account</button>
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal" data-toggle="modal" data-target="#logInModal">Log In</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="nameRoom" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Name Your Room</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Enter a name for your room. It can be anything!</p>
+            <form>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Room Name</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Room Name">
+              </div>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" id="name-room">Submit</button>
+            </form>            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start of Visible Page -->
+
     <h1 class="text-center mb-3">Design Your Space</h1>
     <div class="container-fluid my-auto">
       <div class="row">
         <div class="col-sm-3 tool-pl">
-          <div class="text-center mb-3">
-            <button type="button" class="btn-lg btn-primary"  data-toggle="modal" data-target="#newRoomModal">New Room</button>
+          <div class="text-center mb-5">
+            <button type="button" class="btn-lg btn-primary mr-3"  data-toggle="modal" data-target="#newRoomModal">New Room</button>
+            <button type="button" class="btn-lg btn-outline-primary"  data-toggle="modal" data-target="#saveRoomModal">Save Room</button>
           </div>
           <div>
-            <ul class="list-group list-group-flush"><h2 class="list-header">My Rooms</h2>
-              <li class="list-group-item list-group-item-action">Master Bedroom</li>
-              <li class="list-group-item list-group-item-action">Guest Bedroom</li>
-              <li class="list-group-item list-group-item-action">Living Room</li>
+            <ul class="list-group list-group-flush"><h2 class="list-header">My Saved Rooms</h2>
+              <li class="list-group-item no-rooms-saved pt-4" id="noSavedRooms">Saved rooms appear here!</li>
+              <li class="list-group-item list-group-item-action d-none" id="savedRoom">Bedroom</li>
             </ul>
           </div>
         </div>
@@ -145,7 +258,7 @@
               </div>
               
               <div class="pt-3 pl-3">
-                <a href="#" data-toggle="tooltip" title data-original-title="Change View"><img src="images/change-view-icon.png" class="change-view-icon"></a>
+                <a href="#" data-toggle="tooltip" title data-original-title="Change View"><img src="images/change-view-icon.png" id="change-view-icon"></a>
               </div>
 
               <div class="btn-group pt-3 ml-auto mr-3" role="group" aria-label="Basic example">
@@ -184,12 +297,17 @@
   </footer>
   
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-    <script>
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      })
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>    
+    <script src="roomshui.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        if(window.location.href.indexOf('#newRoomModal') != -1) {
+          $('#newRoomModal').modal('show');
+        }
+
+      });
+  </script>
   </body>
 </html>
 
