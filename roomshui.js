@@ -19,10 +19,11 @@ document.getElementById('change-view-icon').onclick = function() {
 
 document.getElementById('bedroom').onclick = function(){
   $(".design-tool").addClass("top-down");
+  $("#no-room-selected").removeClass().addClass("d-none");
 }
 
 /* Save Room */
-document.getElementById('name-room').onclick = function(){
+document.getElementById('name-room').onclick = function(){  
   $("#noSavedRooms").addClass("d-none");
   $("#savedRoom").removeClass("d-none");
   $("#savedRoom").addClass("font-weight-bold");

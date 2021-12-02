@@ -8,7 +8,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Vibur&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <title>Room Shui</title>
+
+    <!-- Hotjar Tracking Code for https://hlbigham.github.io/roomshui/ -->
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:2729417,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53YWL53HKM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-53YWL53HKM');
+    </script>
+    
   </head>
   <body class="d-flex flex-column h-100">
     <header>
@@ -20,16 +44,16 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto align-items-center">
-            <li class="nav-item mr-3">
+            <li class="nav-item px-2">
               <a class="rs-nav-item" href="index.html">Home</a>
             </li>
-            <li class="nav-item mr-3">
+            <li class="nav-item px-2">
               <a class="rs-nav-item" href="design.html">Design</a>
             </li>
-            <li class="nav-item mr-3">
+            <li class="nav-item pl-2 pr-4">
               <a class="rs-nav-item-active" href="styles.html">Styles</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" id="login">
               <button type="button" class="login-btn" data-toggle="modal" data-target="#logInModal">Log In</button>
             </li>
           </ul>
@@ -49,16 +73,16 @@
               <form>
                 <div class="textOnInput mb-4">
                   <label for="loginInEmail">Email</label>
-                  <input type="email" class="form-control" id="loginInEmail" aria-describedby="emailHelp" placeholder="Enter Email">
+                  <input type="email" class="form-control" id="loginInEmail" aria-describedby="emailHelp">
                 </div>
                 <div class="textOnInput">
                   <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+                  <input type="password" class="form-control" id="exampleInputPassword1">
                 </div>
               </form>
             </div>
             <div class="modal-footer d-block text-center">
-              <button type="button" class="btn-green">Log In</button>
+              <a href="design.html" class="btn-green">Log In</a>
               <p class="small">Trouble logging in? <a href="#" class="link">Get help.</a></p>
               <p class="small">New here? <a href="#" class="link">Create an account.</a></p>
             </div>
@@ -68,8 +92,8 @@
     </header>
   
   <section>
-    <h1 class="text-center my-4">Explore Different Styles</h2>
-    <div class="card-deck card-deck-padding mb-5">
+    <h1 class="text-center my-4 green-text">Explore Different Styles</h2>
+    <div class="card-deck card-deck-padding mb-5 mx-0">
       <div class="card style-card"> 
         <img src="images/feng-shui.jpg" class="card-img-top img-card-styles" alt="...">
         <div class="card-body">        
@@ -81,7 +105,7 @@
       <div class="card style-card">
         <img src="images/midcentury.jpg" class="card-img-top img-card-styles" alt="...">
         <div class="card-body"> 
-          <h2 class="card-title font-weight-bold">Feng Shui</h2>
+          <h2 class="card-title font-weight-bold">Mid Century Modern</h2>
           <p class="card-text">"Just like, I should fancy, and very depressing. I began to wonder what on earth I should do when I caught sight of the play-bill. What do you think the play was, Harry?"</p>
           <p>Additonal Resources: <a href="#" target="_blank">Wikipedia</a></p>
         </div>
@@ -89,13 +113,13 @@
       <div class="card style-card">
         <img src="images/scando.jpg" class="card-img-top img-card-styles" alt="...">
         <div class="card-body">         
-          <h2 class="card-title font-weight-bold">Feng Shui</h2>
+          <h2 class="card-title font-weight-bold">Scandinavian</h2>
           <p class="card-text">"Just like, I should fancy, and very depressing. I began to wonder what on earth I should do when I caught sight of the play-bill. What do you think the play was, Harry?"</p>
           <p>Additonal Resources: <a href="#" target="_blank">Wikipedia</a></p>
         </div>
       </div>
     </div>
-    <div class="card-deck card-deck-padding mb-5">
+    <div class="card-deck card-deck-padding mb-5 mx-0">
       <div class="card style-card">
         <img src="images/industrial.jpg" class="card-img-top img-card-styles" alt="...">
         <div class="card-body">         

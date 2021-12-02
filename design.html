@@ -8,10 +8,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Vibur&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <title>Room Shui</title>
-    
+
+    <!-- Hotjar Tracking Code for https://hlbigham.github.io/roomshui/ -->
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:2729417,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-53YWL53HKM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-53YWL53HKM');
+    </script>
+   
   </head>
-  <body class="d-flex flex-column h-100">
+  <body class="d-flex flex-column">
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand roomshui" href="index.html"><img src="images/logo.png"></a>
@@ -53,16 +76,16 @@
               <form>
                 <div class="textOnInput mb-4">
                   <label for="exampleInputEmail1">Email</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="textOnInput">
                   <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+                  <input type="password" class="form-control" id="exampleInputPassword1">
                 </div>
               </form>
             </div>
             <div class="modal-footer d-block text-center">
-              <button type="button" class="btn-green">Log In</button>
+              <a href="design.html" class="btn-green">Log In</a>
               <p class="small">Trouble logging in? <a href="#" class="link">Get help.</a></p>
               <p class="small">New here? <a href="#" class="link">Create an account.</a></p>
             </div>
@@ -71,7 +94,7 @@
       </div>
     </header>
   
-  <section class="pt-4">
+  <section>
 
     <!-- New Room Modal -->
     <div class="modal fade" id="newRoomModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -85,32 +108,32 @@
           </div>
           <div class="modal-body">
             <div class="card-deck">
-              <div class="card text-center">
-                <div class="card-body">         
+              <div class="card text-center card-modal">
+                <div class="card-body p-0">         
                   <img src="images/template-icon.png" class="card-img-top modal-img" alt="...">
-                  <h5 class="card-title text-center mt-2">Template</h5>
+                  <h5 class="card-title text-center mt-3 h5-smaller">Template</h5>
                   <p class="card-text modal-text">Use a standard room template or create your own.</p>
                 </div>
                 <div class="card-footer text-center">
                   <button type="button" class="btn-green" data-dismiss="modal" data-toggle="modal" data-target="#templatesModal">Create Room</button>
                 </div>
               </div>
-              <div class="card">
-                <div class="card-body text-center">         
+              <div class="card card-modal">
+                <div class="card-body text-center p-0">         
                   <img src="images/room-scan-icon.png" class="card-img-top modal-img" alt="...">
-                  <h5 class="card-title text-center mt-2">Room Scan</h5>
-                  <p class="card-text modal-text">Scan your room with your phone or tablet and we'll figure out the measurements.</p>
+                  <h5 class="card-title text-center mt-3 h5-smaller">Room Scan</h5>
+                  <p class="card-text modal-text">Scan your room with your phone or tablet to figure out the measurements.</p>
                 </div>
                 <div class="card-footer text-center">
                   <button type="button" class="btn-green">Create Room</button>
                 </div>
               </div>
-              <div class="card">                
-                <div class="card-body text-center">  
+              <div class="card card-modal">                
+                <div class="card-body text-center p-0">  
                   <div class="content-stretch-design">
                     <img src="images/measurements-icon.png" class="card-img-top modal-img" alt="...">
                   </div>
-                  <h5 class="card-title text-center mt-2">Manual Measurements</h5>
+                  <h5 class="card-title text-center mt-3 h5-smaller">Manual Measurements</h5>
                   <p class="card-text modal-text">Enter measurements you have on hand for a basic floorplan.</p>
                 </div>
                 <div class="card-footer text-center">                  
@@ -134,30 +157,41 @@
           </div>
           <div class="modal-body">
             <div class="card-deck">
-              <div class="card text-center">
-                <div class="card-body">         
+              <div class="card card-modal text-center">
+                <div class="card-body p-0">         
                   <img src="images/bedroom.png" class="card-img-top modal-img" alt="...">
-                  <h5 class="card-title text-center mt-2">Bedroom</h5>
+                  <h5 class="card-title text-center mt-2 h5-smaller">Bedroom</h5>
                 </div>
                 <div class="card-footer text-center">
                   <button type="button" class="btn-green" id="bedroom" data-dismiss="modal">Select</button>
                 </div>
               </div>
-              <div class="card">
-                <div class="card-body text-center">         
+              <div class="card card-modal">
+                <div class="card-body text-center p-0">         
                   <img src="images/office.png" class="card-img-top modal-img" alt="...">
-                  <h5 class="card-title text-center mt-2">Office</h5>
+                  <h5 class="card-title text-center mt-2 h5-smaller">Office</h5>
                 </div>
                 <div class="card-footer text-center">
                   <button type="button" class="btn-green">Select</button>
                 </div>
               </div>
-              <div class="card">                
-                <div class="card-body text-center">  
+              <div class="card card-modal">                
+                <div class="card-body text-center p-0">  
                   <div class="content-stretch-design">
                     <img src="images/livingroom.png" class="card-img-top modal-img" alt="...">
                   </div>
-                  <h5 class="card-title text-center mt-2">Living Room</h5>
+                  <h5 class="card-title text-center mt-2 h5-smaller">Living Room</h5>
+                </div>
+                <div class="card-footer text-center">                  
+                  <button type="button" class="btn-green">Select</button>
+                </div>
+              </div>
+              <div class="card card-modal">                
+                <div class="card-body text-center p-0">  
+                  <div class="content-stretch-design">
+                    <img src="images/other-room.png" class="card-img-top modal-img" alt="...">
+                  </div>
+                  <h5 class="card-title text-center mt-2 h5-smaller">Create Template</h5>
                 </div>
                 <div class="card-footer text-center">                  
                   <button type="button" class="btn-green">Select</button>
@@ -187,17 +221,17 @@
             <p class="mb-4">Looks like you're not logged in. Create an account or log in to save rooms.</p>
             <form>
               <div class="textOnInput mb-4">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <label for="exampleInputEmail1" class="montserrat-font px-2 font-weight-bold">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted montserrat-font">We'll never share your email with anyone else.</small>
               </div>
               <div class="textOnInput mb-4">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="   Password">
+                <label for="exampleInputPassword1" class="montserrat-font px-2 font-weight-bold">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
               </div>
               <div class="textOnInput mb-4">
-                <label for="exampleInputPassword1">Confirm Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+                <label for="exampleInputPassword1" class="montserrat-font px-2 font-weight-bold">Confirm Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
               </div>
               <button type="button" class="btn-green mr-3" data-dismiss="modal" data-toggle="modal" data-target="#nameRoom">Create Account</button>
               <button type="button" class="btn-green-outline" data-dismiss="modal" data-toggle="modal" data-target="#logInModal">Log In</button>
@@ -221,7 +255,7 @@
             <form>
               <div class="textOnInput mb-4">
                 <label for="exampleInputPassword1">Room Name</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Room Name">
+                <input type="password" class="form-control" id="exampleInputPassword1">
               </div>
               <button type="button" class="btn-green" data-dismiss="modal" id="name-room">Save Room</button>
             </form>            
@@ -232,8 +266,8 @@
 
     <!-- Start of Visible Page -->
 
-    <h1 class="text-center mb-3">Design Your Space</h1>
-    <div class="container-fluid my-3">
+    <h1 class="text-center my-4 green-text">Design Your Space</h1>
+    <div class="container-fluid my-4">
       <div class="row">
         <div class="col-sm-3 tool-pl">
           <div class="text-center mb-5">
@@ -257,26 +291,31 @@
           <div class="design-tool container-fluid">
             <div class="row">
               <div class="dropdown pt-3 pl-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn-green-outline dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Style
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Minimalist</a>
                   <a class="dropdown-item" href="#">Feng Shui</a>
-                  <a class="dropdown-item" href="#">Cottage Core</a>
+                  <a class="dropdown-item" href="#">Mid Century Modern</a>
+                  <a class="dropdown-item" href="#">Scandinavian</a>
+                  <a class="dropdown-item" href="#">Industrial</a>
+                  <a class="dropdown-item" href="#">Jungalow</a>
+                  <a class="dropdown-item" href="#">Modern Farmhouse</a>
                 </div>
               </div>
               
               <div class="pt-3 pl-3">
-                <a href="#" data-toggle="tooltip" title data-original-title="Change View"><img src="images/change-view-icon.png" id="change-view-icon"></a>
+                <a href="#" data-toggle="tooltip" title data-original-title="Change View"><img src="images/logo-icon.png" id="change-view-icon"></a>
               </div>
 
-              <div class="btn-group pt-3 ml-auto mr-3" role="group" aria-label="Basic example">
-                <div class="d-block"><button type="button" class="btn btn-secondary"><b>+</b></button></div>
-                <div class="d-block"><button type="button" class="btn btn-secondary"><b>-</b></button></div>
+              <div class="btn-group pt-3 ml-auto mr-3 zoom" role="group" aria-label="Basic example">
+                  <span class="d-block"><button type="button" class="btn-green-outline zoom-size" id="top-btn">+</button></span>
+                  <span class="d-block"><button type="button" class="btn-green-outline zoom-size" id="bottom-btn">-</button></span>
               </div>
             </div>
-            
+            <div class="d-flex align-items-center justify-content-center h-75" id="no-room-selected">
+              <p class="m-0 font-weight-bold">Create a new room or select a saved one to see your design!</p>
+            </div>
           </div>
         </div>
       </div>
